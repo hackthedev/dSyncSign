@@ -52,6 +52,19 @@ export class dSyncSign {
         }
     }
 
+    GenerateGid(publicKey) {
+        if (publicKey.length >= 120) {
+            return this.EncodeToBase64(publicKey.substring(80, 120)) // 40 chars
+        } else {
+            return this.EncodeToBase64(publicKey.substring(0, publicKey.length))
+        }
+    }
+
+    EncodeToBase64(str) {
+        return Buffer.from(str, "utf8").toString("base64")
+    }
+
+
     async getPrivateKey() {
         const {privateKey} = await this.ensureKeyPair();
         return privateKey;
