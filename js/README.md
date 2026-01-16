@@ -1,5 +1,10 @@
 # dSyncSign
 
+> [!WARNING]
+>
+> This repo wont be continued and has been moved to an org:  
+> https://github.com/NETWORK-Z-Dev/dSyncSign
+
 dSyncSign is an additional package that comes with a few helper functions that can enhance the plain dSync package. dSyncSign comes with the following features:
 
 - Creation of a private key file and public key
